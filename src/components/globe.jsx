@@ -8,15 +8,15 @@ export default function Globe(){
  const pins = [
     { top: "38%", left: "20%", name: "Ayushi", age: 25, score: 120 },
     { top: "45%", left: "70%", name: "Rohit", age: 27, score: 90  },
-    { top: "40%", left: "50%", name: "Sneha", age: 23, score: 105 },
-    { top: "35%", left: "45%", name: "Sneha", age: 23, score: 105 },
-    { top: "39%", left: "43%", name: "Sneha", age: 23, score: 105 },
-    { top: "42%", left: "38%", name: "Sneha", age: 23, score: 105 },
-    { top: "48%", left: "35%" , name: "Sneha", age: 23, score: 105},
-    { top: "50%", left: "28%", name: "Sneha", age: 23, score: 105 },
-    { top: "55%", left: "60%", name: "Sneha", age: 23, score: 105 },
-    { top: "80%", left: "40%", name: "Sneha", age: 23, score: 105 },
-    { top: "60%", left: "10%", name: "Sneha", age: 23, score: 105 },
+      { top: "40%", left: "50%", name: "Sneha", age: 23, score: 105 },
+      { top: "35%", left: "45%", name: "Sneha", age: 23, score: 105 },
+      { top: "39%", left: "43%", name: "Sneha", age: 23, score: 105 },
+      { top: "42%", left: "38%", name: "Sneha", age: 23, score: 105 },
+      { top: "48%", left: "35%" , name: "Sneha", age: 23, score: 105},
+      { top: "50%", left: "28%", name: "Sneha", age: 23, score: 105 },
+      { top: "55%", left: "60%", name: "Sneha", age: 23, score: 105 },
+      { top: "80%", left: "40%", name: "Sneha", age: 23, score: 105 },
+      { top: "60%", left: "10%", name: "Sneha", age: 23, score: 105 },
   ];
 
 return (
@@ -50,13 +50,16 @@ return (
             <div
               style={{
                 position: "absolute",
-                top: `calc(${pos.top} - 60px)`,
-                left: `calc(${pos.left} + 30px)`,
-                background: "rgba(255, 255, 255, 0.9)",
+                top: `calc(${pos.top} - 200px)`,
+                left: `calc(${pos.left} + 10px)`,
+                background: "	rgb(32,32,32)",
                 borderRadius: "10px",
                 padding: "10px",
                 boxShadow: "0 2px 8px rgba(0,0,0,0.2)",
                 zIndex: 10,
+                textAlign: "left",
+                color: "white",
+                cursor: "pointer",
               }}
             >
               <PlayerCard player={pos} />
