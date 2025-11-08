@@ -11,13 +11,10 @@ export default function PlayerCard({ player }) {
       <div className="w-full h-full overflow-hidden mb-2 rounded-md">
          <div className="absolute left-[-18px] top-1/3 -translate-y-1/2 bg-[rgba(46,46,46,0.8)]  text-gray w-8 h-8 rounded-full flex items-center justify-center transition">
           <IoIosArrowBack />
-
           </div>
            <img src="/profilePhoto.jpeg" style={{height: "140px", width: "140px"}} alt="Player" />
            <div className="absolute right-[-18px] top-1/3 -translate-y-1/2 bg-[rgba(46,46,46,0.8)]  text-gray w-8 h-8 rounded-full flex items-center justify-center transition">
             <IoIosArrowForward />
-
-
            </div>
       </div>
       <div className="">

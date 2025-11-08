@@ -40,13 +40,13 @@ export default function Globe() {
                   top: `calc(${pos.top} - 230px)`,
                   left: `calc(${pos.left} - 155px)`,
                 }}
-                initial={{ opacity: 0, scale: 0.5, x: 50, rotate: -6 }}
-                animate={{ opacity: 1, scale: 1, x: 0, rotate: -6  }}
-                exit={{ opacity: 0, scale: 0.5, x: -50, rotate: -6  }}
+                initial={{ opacity: 0, scale: 0.5, x: 50,rotate: -4 }}
+                animate={{ opacity: 1, scale: 1, x: 0,rotate: -4  }}
+                exit={{ opacity: 0, scale: 0.5, x: -50, rotate: -4  }}
                 transition={{
-                  type: "spring",
                   stiffness: 250,
                   damping: 15,
+                  
                 }}
               >
                 <PlayerCard player={pos} />
@@ -58,3 +58,8 @@ export default function Globe() {
     </div>
   );
 }
+
+
+
+
+
