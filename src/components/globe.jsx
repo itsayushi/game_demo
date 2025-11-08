@@ -1,6 +1,4 @@
-
 import { useState } from "react";
-import { FaMapPin } from "react-icons/fa6";
 import { motion, AnimatePresence } from "framer-motion";
 import PlayerCard from "../components/playerCard";
 
@@ -8,40 +6,43 @@ export default function Globe() {
   const [hoveredPin, setHoveredPin] = useState(null);
 
   const pins = [
-    { top: "38%", left: "20%", name: "Ayushi" },
-    { top: "45%", left: "70%", name: "Rohit", age: 27, score: 90 },
-    { top: "40%", left: "50%", name: "Sneha", age: 23, score: 105 },
-    { top: "35%", left: "45%", name: "Sneha", age: 23, score: 105 },
-    { top: "42%", left: "38%", name: "Sneha", age: 23, score: 105 },
-    { top: "50%", left: "28%", name: "Sneha", age: 23, score: 105 },
-    { top: "55%", left: "60%", name: "Sneha", age: 23, score: 105 },
-    { top: "60%", left: "10%", name: "Sneha", age: 23, score: 105 },
+    { top: "37%", left: "47%" },
+    { top: "37%", left: "49%" },
+    { top: "41%", left: "46%" },
+    { top: "49%", left: "44%" },
+    { top: "46%", left: "49%" },
+    { top: "56%", left: "25%" },
   ];
 
   return (
-    <div className="relative bg-[url('/planet.jpg')] bg-no-repeat bg-cover rounded-2xl w-[1200px] h-[600px] mx-auto">
+    <div className="relative bg-[url('/globe.png')] bg-no-repeat bg-cover rounded-2xl w-[1200px] h-[600px] mx-auto">
       {pins.map((pos, index) => (
         <div key={index}>
-          <FaMapPin
+         
+          <div
             onMouseEnter={() => setHoveredPin(index)}
             onMouseLeave={() => setHoveredPin(null)}
-            className="absolute text-red-500 cursor-pointer z-20 text-base -translate-x-1/2 -translate-y-full"
+            className="absolute cursor-pointer z-100"
             style={{
               top: pos.top,
               left: pos.left,
+              width: "50px",  
+              height: "50px",
+              transform: "translate(-50%, -50%)",
             }}
           />
+
           <AnimatePresence>
             {hoveredPin === index && (
               <motion.div
-                className="absolute bg-[#202020] rounded-md p-2 text-left text-white shadow-lg"
+                className="absolute bg-[rgba(46,46,46,0.8)] rounded-md p-2 text-left text-white shadow-lg"
                 style={{
-                  top: `calc(${pos.top} - 235px)`,
-                  left: `calc(${pos.left} - 125px)`,
+                  top: `calc(${pos.top} - 230px)`,
+                  left: `calc(${pos.left} - 155px)`,
                 }}
-                initial={{ opacity: 0, scale: 0.5, y: 20, rotate: -8 }}
-                animate={{ opacity: 1, scale: 1, y: 0, rotate: -8 }}
-                exit={{ opacity: 0, scale: 0.5, y: 20, rotate: -8 }}
+                initial={{ opacity: 0, scale: 0.5, x: 50, rotate: -6 }}
+                animate={{ opacity: 1, scale: 1, x: 0, rotate: -6  }}
+                exit={{ opacity: 0, scale: 0.5, x: -50, rotate: -6  }}
                 transition={{
                   type: "spring",
                   stiffness: 250,
