@@ -44,6 +44,7 @@ export default function Globe() {
                 animate={{ opacity: 1, scale: 1, x: 0,rotate: -4  }}
                 exit={{ opacity: 0, scale: 0.5, x: -50, rotate: -4  }}
                 transition={{
+                  duration: 0.2, 
                   stiffness: 250,
                   damping: 15,
                   
@@ -58,8 +59,5 @@ export default function Globe() {
     </div>
   );
 }
-
-
-
 
 
