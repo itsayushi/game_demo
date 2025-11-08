@@ -26,8 +26,8 @@ export default function Globe() {
             style={{
               top: pos.top,
               left: pos.left,
-              width: "50px",  
-              height: "50px",
+              width: "20px",
+              height: "20px",
               transform: "translate(-50%, -50%)",
             }}
           />
